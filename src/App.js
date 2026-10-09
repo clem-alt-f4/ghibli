@@ -4,7 +4,8 @@ import Commencer from './pages/Acceuil.js';
 
 function App() {
   return (
-    <BrowserRouter>
+    // L'ajout du basename permet à React Router de comprendre qu'il est dans le sous-dossier /ghibli
+    <BrowserRouter basename="/ghibli">
       <Routes>
         <Route path='/' element={<Commencer />} />
         <Route path='/film/:id' element={<Movie />} />
@@ -14,3 +15,4 @@ function App() {
 }
 
 export default App;
+
